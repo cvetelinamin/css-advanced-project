@@ -2,7 +2,7 @@ title: Dream House
 email: cvetelina.min.georgieva@gmail.com
 description: Find your dream house
 destination: docs
-baseurl: "" # the subpath of your site, e.g. /blog
+# baseurl: "/css-advanced-project" 
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll

@@ -1,0 +1,9 @@
+:root {
+    --font-family-body: Georgia, serif;
+    --font-family-headings: Palatino Linotype, serif;
+    --font-size: 21px;
+    --font-line-height: 1.5;
+
+    --layout-width: 65em;
+    --layout-padding-b: 1.0em;
+}
