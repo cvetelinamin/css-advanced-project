@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
+
 :root {
-    --font-family-body: Georgia, serif;
-    --font-family-headings: Palatino Linotype, serif;
-    --font-size: 21px;
+    --font-family-body: 'Open Sans', sans-serif;
+    --font-family-headings: 'Georgia', serif;
+    --font-size: 18px;
     --font-line-height: 1.5;
 
-    --layout-width: 65em;
+    --layout-width: 70rem;
     --layout-padding-b: 1.0em;
 }

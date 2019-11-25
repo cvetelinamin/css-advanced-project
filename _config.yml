@@ -1,4 +1,4 @@
-title: Dream House
+title: Dream Home
 email: cvetelina.min.georgieva@gmail.com
 description: Find your dream house
 destination: docs
@@ -12,6 +12,7 @@ plugins:
   - jekyll-feed
 
 exclude:
+  - docs
   - .sass-cache/
   - .jekyll-cache/
   - gemfiles/
