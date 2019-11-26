@@ -1,55 +1,82 @@
 .site-nav {
     text-align: right;
     padding-top: 0.5em;
+
+    @include bp(mobile) {
+        display: none;
+    }
+
+        ul {
+            padding: 0;
+            margin: 0;
+
+            @include bp(desktop){
+                display: flex;
+                align-items: center;
+            }
+
+            li {
+                display: block;
+                padding: 0.5em 1em; 
+                margin: 0.5em;
+                transform: translate(0, -5em);
+                opacity: 0;
+                transition: opacity 0.5s ease-in, transform 0.5s ease-in;
+            
+                &:nth-child(4){transition-delay: 0.1s;}
+                &:nth-child(3){transition-delay: 0.2s;}
+                &:nth-child(2){transition-delay: 0.3s;}
+                &:nth-child(1){transition-delay: 0.4s;}
+
+                .loaded & {
+                    opacity: 1;
+                    transform: translate(0, 0);
+                }
+
+                &.current-page,
+                &:hover {
+                    border-top: 2px solid rgb(180, 9, 9);
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+    a {
+        display: flex;
+        color: black;
+        text-decoration: none;
+
+        &::before {
+            display: block;
+            margin-right: 0.5em;
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+        }
+    }
+
+    li.page-title-about a::before {
+        content: '\f47f';
+    }
+
+    li.page-title-contacts a::before {
+        content: '\f2a0';
+    }
 }
 
-.site-nav ul {
-    display: flex;
-    align-items: center;
-}
-
-.site-nav ul li {
-    display: block;
-    padding: 0.5em 1em; 
-    margin: 0.5em;
-    transform: translate(0, -5em);
+.nav-toggle {
+    position: absolute;
+    pointer-events: none;
     opacity: 0;
-    transition: opacity 0.3s ease-in, transform 0.3s ease-in;
-}
 
-nav ul li:nth-child(4){transition-delay: 0.1s;}
-nav ul li:nth-child(3){transition-delay: 0.2s;}
-nav ul li:nth-child(2){transition-delay: 0.3s;}
-nav ul li:nth-child(1){transition-delay: 0.4s;}
+    &:checked + .site .site-header .site-nav {
+        @include bp(mobile) {
+            display: block;
+        }
+    }
 
-.loaded .site-nav ul li {
-    opacity: 1;
-    transform: translate(0, 0);
-}
-
-.site-nav .current-page,
-.site-nav li:hover {
-    border-top: 2px solid rgb(180, 9, 9);
-    transform: scale(1.1);
-}
-
-.site-nav a {
-    display: flex;
-    color: black;
-    text-decoration: none;
-}
-
-.site-nav li a::before {
-    display: block;
-    margin-right: 0.5em;
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-}
-
-.site-nav li.page-title-about a::before {
-    content: '\f47f';
-}
-
-.site-nav li.page-title-contacts a::before {
-    content: '\f2a0';
+    &-lable {
+        @include bp(desktop) {
+            display: none;
+        }
+    }
 }
