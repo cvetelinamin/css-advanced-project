@@ -6,7 +6,7 @@
     justify-content: space-between;
 }
 
-.categories .entry {
+.categories.location-home .entry {
     flex: 0 0 45%;
     display: flex;
     flex-direction: column;
@@ -15,11 +15,11 @@
     position: relative;
     z-index: 30;
     /* top: -3em; */
-    transition: box-shadow 0.3s ease-in;
+    transition: box-shadow 0.5s ease-in;
     margin: 3em 0;
 }
 
-.categories .entry:hover{
+.categories.location-home .entry:hover{
     box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.5);
 }
 
