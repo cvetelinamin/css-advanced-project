@@ -24,6 +24,13 @@
             {% include navigation.html location="header" %}
         </header>
         <main class="site-main">
+            {% if page.featured_image %}
+            <section class="site-media" style="background-image: url('{{ page.featured_image }}');">
+                {% if page.fancy_text != ''%}
+                    <h2>{{ page.fancy_text }}</h2>
+                {% endif %}
+            </section>
+            {% endif %}
                 {{ content }}
         </main>
         <footer class="site-footer site-wrapper">
