@@ -5,38 +5,18 @@
 }
 
 .page-about {
-
-    .site-media {
-        background-position: center;
-        height: 300vh;
-    }
-
-    .site-main {
-        position: relative;
-    }
     
-    .site-main .site-about {
+    .site-about {
         background-image: url('https://images.unsplash.com/photo-1560026301-88340cf16be7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1868&q=80');
         padding: 1em;
-        // background-position: center;
-        
-        // &::before {
-        //     display: block;
-        //     content: '';
-        //     background-color: rgba(0, 0, 0, 0.5);
-        //     position: absolute;
-        //     top: 0;
-        //     left: 0;
-        //     right: 0;
-        //     bottom: 0;
-        // }
+        background-position: top;
 
         .main-content-about,
         .info {
             color: #FFF;
             background-color: rgba(0, 0, 0, 0.5);
             margin: 0 3em;
-            padding: 1em 2em;
+            padding: 1em 3em;
         }
 
         h2 {
@@ -44,10 +24,22 @@
             margin: 1em 0;
         }
 
+        & div:first-of-type {
+            display: block;
+        }
+
         .info {
+            display: none;
             padding-top: 1em;
-            display: flex;
-            justify-content: space-between;
+        }
+
+        .button {
+            text-decoration: underline;
+            text-align: right;
+        }
+
+        .button .less {
+            display: none;
         }
 
         .mission {
@@ -59,6 +51,62 @@
         }
     }
 
+    .team-info {
+        margin: 1em 3em;
 
+        .manager {
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            padding: 1em;
+            margin: 1em;
+            display: flex;
+            justify-content: space-between;
+            height: 50vh;
+            transition: box-shadow 0.5s ease-in;
+        }
 
+        .manager:hover {
+            box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.5);
+        }
+
+        .img {
+            flex: 0 0 30%;
+            overflow: hidden;
+        }
+
+        .content {
+            flex: 0 0 60%;
+
+            .name {
+                font-size: 1.2em;
+            }
+
+            .title,
+            .email,
+            .phone {
+                font-size: 0.8em;
+                opacity: 0.8;
+            }
+        }
+    }
 }
+
+input {
+    display: none;
+}
+
+input:checked + .site-about .info {
+    display: flex;
+    justify-content: space-between;
+}
+
+input:checked + .site-about .button .less {
+    display: block;
+}
+
+input:checked + .site-about .button .more {
+    display: none;
+}
+
+// input:checked + .site-about {
+//     background-position: center;
+// }

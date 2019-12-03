@@ -10,7 +10,7 @@
             document.querySelector('body').classList.add('loaded');
         });
     </script>
-    <link rel="stylesheet" href="{{ site.baseurl }}/css/fontawesome/css/all.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
     <link rel="stylesheet" href="{{ site.baseurl }}/css/site.css">
 </head>
 <body class="page-{{ page.title | slugify }}">
@@ -34,7 +34,6 @@
                 {{ content }}
         </main>
         <footer class="site-footer site-wrapper">
-                {% include navigation.html location="footer" %}
 
             <p>{{ site.title }} &copy; All rights reserved</p>
         </footer>
