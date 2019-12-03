@@ -72,13 +72,14 @@ blockquote {
     border-radius: 0.2em;
     margin: 1em 7em;
     background-color: rgb(230, 229, 218);
-}
 
-p:last-child {
-    text-align: right;
-    font-size: 0.8em;
+    & p:last-child {
+        text-align: right;
+        font-size: 0.8em;
+    }
 }
 
 .site-footer {
     background-color: #fff;
 }
+

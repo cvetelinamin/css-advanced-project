@@ -3,3 +3,62 @@
         height: 90vh;
     }
 }
+
+.page-about {
+
+    .site-media {
+        background-position: center;
+        height: 300vh;
+    }
+
+    .site-main {
+        position: relative;
+    }
+    
+    .site-main .site-about {
+        background-image: url('https://images.unsplash.com/photo-1560026301-88340cf16be7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1868&q=80');
+        padding: 1em;
+        // background-position: center;
+        
+        // &::before {
+        //     display: block;
+        //     content: '';
+        //     background-color: rgba(0, 0, 0, 0.5);
+        //     position: absolute;
+        //     top: 0;
+        //     left: 0;
+        //     right: 0;
+        //     bottom: 0;
+        // }
+
+        .main-content-about,
+        .info {
+            color: #FFF;
+            background-color: rgba(0, 0, 0, 0.5);
+            margin: 0 3em;
+            padding: 1em 2em;
+        }
+
+        h2 {
+            text-align: center;
+            margin: 1em 0;
+        }
+
+        .info {
+            padding-top: 1em;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .mission {
+            flex: 0 0 45%;
+        }
+
+        .team {
+            flex: 0 0 45%;
+        }
+    }
+
+
+
+}
