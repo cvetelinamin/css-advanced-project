@@ -90,11 +90,19 @@
     }
 
     li.page-title-about a::before {
-        content: '\f47f';
+        content: '\f2bb';
     }
 
     li.page-title-contacts a::before {
         content: '\f2a0';
+    }
+
+    li.page-title-houses a::before {
+        content: '\f1ad';
+    }
+
+    li.page-title-services a::before {
+        content: '\f0c9';
     }
 }
 
