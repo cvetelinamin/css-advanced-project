@@ -55,7 +55,7 @@
         margin: 1em 3em;
 
         .manager {
-            border: 1px solid rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(0, 0, 0, 0.3);
             padding: 1em;
             margin: 1em;
             display: flex;
@@ -125,16 +125,22 @@ input:checked + .site-about .button .more {
             margin: 2em 0;
             background-color: #EEE;
             position: relative;
-            box-shadow: 0 0 1.2em #888888;
+            // box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.5);
+            
             
             &:nth-child(even) {
                 flex-direction: row-reverse;
+
+                .img {
+                    border-left: 1px solid black;
+                    border-right: none;
+                }
             }
         }
 
         .img {
             flex: 0 0 50%;
-            border: 1px solid black;
+            border-right: 1px solid black;
             overflow: hidden;
             box-shadow: inset 0 0 1.5em #888888;
             position: relative;
@@ -150,12 +156,55 @@ input:checked + .site-about .button .more {
         .content {
             flex: 0 0 50%;
             padding: 1em 2em;
-            border:1px solid black;
             box-shadow:inset 0 0 1em #888888;
         }
     }
 }
 
+.page-contacts {
+    .info {
+        max-width: var(--layout-width);
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .form {
+        flex: 0 0 35%;
+        height: 50vh;
+        margin: 3em 1em;
+
+        input {
+            display: block;
+            width: 100%;
+            padding: 0.5em 1em;
+            margin-bottom: 1em;
+        }
+
+        .message {
+            height: 15vh;
+        }
+
+        .submit {
+            width: auto;
+            background-color: orange;
+            border-radius: 0.5em;
+            border: none;
+        }
+    }
+
+    .adress {
+        flex: 0 0 50%;
+
+        h3 {
+            color: rgb(126, 125, 125);
+        }
+
+        p {
+            font-size: 0.8em;
+        }
+    }
+}
 // input:checked + .site-about {
 //     background-position: center;
 // }

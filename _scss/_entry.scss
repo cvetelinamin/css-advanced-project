@@ -5,7 +5,8 @@
     display: flex;
     justify-content: space-between;
     
-    &.location-home .entry {
+    &.location-home .entry,
+    &.location-houses .entry {
         flex: 0 0 30%;
         display: flex;
         flex-direction: column;
@@ -14,15 +15,19 @@
         position: relative;
         z-index: 30;
         /* top: -3em; */
+        box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.4);
+
         transition: box-shadow 0.5s ease-in;
         margin: 3em 0;
     }
     
-    &.location-home .entry:hover{
-        box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.5);
+    &.location-home .entry:hover,
+    &.location-houses .entry:hover {
+        box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.7);
     }
     
-    &.location-home .entry-media {
+    &.location-home .entry-media,
+    &.location-houses .entry-media {
         flex: 0 0 50%;
         position: relative;
         overflow: hidden;
