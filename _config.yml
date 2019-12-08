@@ -12,6 +12,10 @@ github_username:  jekyll
 plugins:
   - jekyll-feed
 
+collections:
+  agents:
+  categories:
+
 exclude:
   - docs
   - .sass-cache/
@@ -29,3 +33,4 @@ exclude:
   - package.json
   - gulpfile.js
   - theme-personal 
+

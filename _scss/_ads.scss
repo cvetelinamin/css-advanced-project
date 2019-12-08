@@ -2,13 +2,14 @@
 .row,
 .description,
 .characteristics,
-.place {
+.location {
     max-width: var(--layout-width);
     margin: 0 auto;
     padding-top: 2em;
 }
 
 .gallery {
+    padding-left: 5em;
     display: grid;
     grid-template-columns: repeat(9, 1fr);
     grid-auto-flow: dense;
@@ -93,22 +94,29 @@
     border-bottom: 1px solid #787878;
     padding-top: 1em;
 
+    h3 {
+        padding-left: 1em;
+    }
+
     & > div {
         display: flex;
 
         & p {
             flex: 0 0 25%;
-            padding: 1em 2em;
+            padding: 1em 3em;
         }
     }
 }
 
-.place {
+.location {
     padding-top: 1em;
 
     h3 {
         color: #787878;
         padding-bottom: 1em;
-
+        padding-left: 1em;
+    }
+    iframe {
+        border: 1px solid black;
     }
 }
