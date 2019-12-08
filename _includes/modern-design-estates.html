@@ -1,35 +1,21 @@
 <section class="categories location-{{ include.location }}">
+    {% for estate in site.estates-modern %}
     <article class="entry">
-        <div class="entry-media">
-            <img src="https://i.pinimg.com/564x/ee/8c/f0/ee8cf09229993908caa877b6e0a8d5b4.jpg" alt="">
-        </div>
-        <div class="entry-content">
-            <h3 class="entry-title">
-                Пренеси се в Лос Анджелис 
-            </h3>
-            <p>
-                The goal of this house is to make it unforgettable and a place where kids can grow and play for many years.
-            </p>
-            <p class="entry-meta">
-                <a href="/three-house">Gallery</a>
-            </p>
-        </div>
-    </article>
-    <article class="entry">
-        <div class="entry-media">
-            <img src="https://images.unsplash.com/photo-1520608421741-68228b76b6df?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjM0MTM2fQ&auto=format&fit=crop&w=334&q=80" alt="">
-        </div>
-        <div class="entry-content">
-            <h3 class="entry-title">
-                A-frame cabin in the woods
-            </h3>
-            <p>
-                sasadsadda
-            </p>
-            <p class="entry-meta">
-                <a href="/cabin">Gallery</a>
-            </p>
-        </div>
-    </article>
+            <div class="entry-media">
+                <img src="{{ estate.image_path }}" alt="">
+            </div>
+            <div class="entry-content">
+                <h3 class="entry-title">
+                    {{ estate.title }}
+                </h3>
+                <p>
+                    {{ estate.content }}
+                </p>
+                <p class="entry-meta">
+                    <a href="/three-house/">{{ estate.link }}</a>
+                </p>
+            </div>
+        </article>
+    {% endfor %}
 </section>
     

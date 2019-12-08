@@ -1,34 +1,20 @@
 <section class="categories location-{{ include.location }}">
+    {% for estate in site.estates-woods %}
     <article class="entry">
-        <div class="entry-media">
-            <img src="https://i.pinimg.com/564x/27/6f/5c/276f5c6bdb709b4521f65922a9ef31ee.jpg" alt="">
-        </div>
-        <div class="entry-content">
-            <h3 class="entry-title">
-                Amazing three house
-            </h3>
-            <p>
-                The goal of this house is to make it unforgettable and a place where kids can grow and play for many years.
-            </p>
-            <p class="entry-meta">
-                <a href="/three-house/">Gallery</a>
-            </p>
-        </div>
-    </article>
-    <article class="entry">
-        <div class="entry-media">
-            <img src="https://i.pinimg.com/564x/5f/52/3e/5f523e555df05edd2c0fede4d5c7f60d.jpg" alt="">
-        </div>
-        <div class="entry-content">
-            <h3 class="entry-title">
-                A-frame cabin in the woods
-            </h3>
-            <p>
-                sasadsadda
-            </p>
-            <p class="entry-meta">
-                <a href="/cabin/">Gallery</a>
-            </p>
-        </div>
-    </article>
+            <div class="entry-media">
+                <img src="{{ estate.image_path }}" alt="">
+            </div>
+            <div class="entry-content">
+                <h3 class="entry-title">
+                    {{ estate.title }}
+                </h3>
+                <p>
+                    {{ estate.content }}
+                </p>
+                <p class="entry-meta">
+                    <a href="/three-house/">{{ estate.link }}</a>
+                </p>
+            </div>
+        </article>
+    {% endfor %}
 </section>

@@ -15,6 +15,9 @@ plugins:
 collections:
   agents:
   categories:
+  estates-woods:
+  estates-modern: 
+  estates-beach:
 
 exclude:
   - docs
