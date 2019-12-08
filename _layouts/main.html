@@ -33,9 +33,10 @@
             {% endif %}
                 {{ content }}
         </main>
-        <footer class="site-footer site-wrapper">
+        <footer class="site-footer">
 
-            <p>{{ site.title }} &copy; All rights reserved</p>
+                {% include footer.html location="footer" %}
+
         </footer>
     </div>
 

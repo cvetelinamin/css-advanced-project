@@ -20,6 +20,7 @@
         }
 
         h2 {
+            font-weight: 500;
             text-align: center;
             margin: 1em 0;
         }
@@ -113,6 +114,7 @@ input:checked + .site-about .button .more {
         max-width: var(--layout-width);
         height: 100%;
         margin: 0 auto;
+        margin-bottom: 3em;
 
         .service {
             display: flex;
@@ -122,11 +124,10 @@ input:checked + .site-about .button .more {
             outline-offset: 0.7em;
             border: 1px solid black;    
             height: 50vh;
-            margin: 2em 0;
+            margin: 3em 0;
             background-color: #EEE;
             position: relative;
             // box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.5);
-            
             
             &:nth-child(even) {
                 flex-direction: row-reverse;
@@ -157,11 +158,19 @@ input:checked + .site-about .button .more {
             flex: 0 0 50%;
             padding: 1em 2em;
             box-shadow:inset 0 0 1em #888888;
+
+            h2 {
+                font-weight: 500;
+            }
         }
     }
 }
 
 .page-contacts {
+    .site-iframe {
+        margin-bottom: 2em;
+    }
+
     .info {
         max-width: var(--layout-width);
         margin: 0 auto;
@@ -198,6 +207,7 @@ input:checked + .site-about .button .more {
 
         h3 {
             color: rgb(126, 125, 125);
+            font-weight: 500;
         }
 
         p {

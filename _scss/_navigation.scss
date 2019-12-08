@@ -1,6 +1,7 @@
 .site-nav {
     text-align: right;
     padding-top: 0.5em;
+    padding-right: 3em;
 
     @include bp(mobile) {
         display: none;
@@ -37,7 +38,7 @@
                 position: absolute;
                 top: 100%;
                 left: 0;
-                background-color: red;
+                background-color: #910;
                 border-radius: 0.3em;
 
                 li {
@@ -84,7 +85,7 @@
     a:hover,
     a:focus,
     .current-page a {
-        background-color: red;
+        background-color: #910;
         color: #FFF;
     }
 

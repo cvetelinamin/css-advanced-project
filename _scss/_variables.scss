@@ -1,11 +1,41 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
 
 :root {
-    --font-family-body: 'Open Sans', sans-serif;
-    --font-family-headings: 'Georgia', serif;
+    --font-family-body: 'Fira Sans', sans-serif;
+    --font-family-headings: 'Fira Sans', sans-serif;
     --font-size: 18px;
     --font-line-height: 1.5;
 
     --layout-width: 70rem;
     --layout-padding-b: 1.0em;
+
+    --categories-background-color: #EEE;
+    --categories-template-column: 1fr 1fr;
+    --categories-template-rows: 1fr 1fr;
+    --category-entry-height: 50vh;
+    --entry-background-color: #F8F8F8;
+    --entry-box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.3);
+    --entry-transition: box-shadow 0.5s ease-in;
+    --entry-hover-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.8);
+    --entry-img-transition: transform 0.5s ease-in-out;
+    --entry-img-hover-transform: translate(-50%, -50%) scale(1.1);
+    --entry-content-shadow: 0 0 1.5em 0 rgba(0, 0, 0, 0.1);
+    --entry-title-font-size: 1.5em;
+
+    --location-entry-height: 35em;
+    --lacation-entry-box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.4);
+    --entry-meta-font-size: 1.5em;
+    --entry-meta-color: #222;
+
+    --gallery-padding-left: 5em;
+    --gallery-template-columns: repeat(9, 1fr);
+    --gallery-gap: 1em;
+    --gallery-li-border: 3px solid black;
+    --portrait-padding-top: 178%;
+    --portrait-row-span: span 3;
+    --portrait-column-span: span 2;
+    --landscape-padding-top: 56.25%;
+    --landscape-column-span: span 2;
+    --ad-content-color: #787878;
+    --iframe-border-color: black;
 }

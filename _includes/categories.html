@@ -8,11 +8,11 @@
                 <h3 class="entry-title">
                     <a href="#">{{ category.title }}</a> 
                 </h3>
-                <p class="entry-meta">
-                    <a href="/woods-houses/">{{ category.link }}</a>
-                </p>
                 <p>
                     {{ category.content }}
+                </p>
+                <p class="entry-meta">
+                    <a href="/{{ category.permalink}}/">{{ category.link }} <i class="fas fa-chevron-right"></i></a>
                 </p>
             </div>
         </article>

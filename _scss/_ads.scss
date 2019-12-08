@@ -2,26 +2,26 @@
 .row,
 .description,
 .characteristics,
-.location {
+.location,
+.submit-form {
     max-width: var(--layout-width);
     margin: 0 auto;
     padding-top: 2em;
 }
 
 .gallery {
-    padding-left: 5em;
+    padding-left: var(--gallery-padding-left);
     display: grid;
-    grid-template-columns: repeat(9, 1fr);
+    grid-template-columns: var(--gallery-template-columns);
     grid-auto-flow: dense;
-    grid-column-gap: 1em;
-    grid-row-gap: 1em;
+    grid-gap: var(--gallery-gap);
 
     li {
         display: block;
         list-style: none outside;
         position: relative;
         overflow: hidden;
-        border: 5px solid black;
+        border: var(--gallery-li-border);
         transition: transform 0.3s ease-in-out;
 
         &::before {
@@ -31,18 +31,23 @@
         }
 
         &.portrait {
-            grid-row: span 3;
-            grid-column: span 2;
+            grid-row: var(--portrait-row-span);
+            grid-column: var(--portrait-column-span);
             &:before {
-                padding-top: 178%;
+                padding-top: var(--portrait-padding-top);
             }
         }
 
         &.landscape {
-            grid-column: span 2;
+            grid-column: var(--landscape-column-span);
 
+            img {
+                width: 100%;
+                height: auto;
+            }
+            
             &::before {
-                padding-top: 56.25%;
+                padding-top: var(--landscape-padding-top);
             }
         }
         
@@ -74,24 +79,24 @@
     p {
         flex: 0 0 25%;
         padding: 1em 2em;
-        color: #787878;
+        color: var(--ad-content-color);
     }
 }
 
 .row {
-    border-bottom: 1px solid #787878;
+    border-bottom: 1px solid var(--ad-content-color);
 }
 
 .description {
     padding: 1em 3em;
     color: #787878;
-    border-bottom: 1px solid #787878;
+    border-bottom: 1px solid var(--ad-content-color);
     padding-top: 2em;
 }
 
 .characteristics {
     color: #787878;
-    border-bottom: 1px solid #787878;
+    border-bottom: 1px solid var(--ad-content-color);
     padding-top: 1em;
 
     h3 {
@@ -109,14 +114,14 @@
 }
 
 .location {
-    padding-top: 1em;
+    padding: 1em 0;
 
     h3 {
-        color: #787878;
+        color: var(--ad-content-color);
         padding-bottom: 1em;
         padding-left: 1em;
     }
     iframe {
-        border: 1px solid black;
+        border: 1px solid var(--iframe-border-color);
     }
 }

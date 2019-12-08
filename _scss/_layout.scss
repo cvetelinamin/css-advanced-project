@@ -1,4 +1,3 @@
-.site-header,
 .site-wrapper {
     max-width: var(--layout-width);
     margin: 0 auto;
@@ -7,6 +6,15 @@
 .site-header {
     position: relative;
     z-index: 2000;
+    box-shadow: 0 0.5em 0.5em rgba(0, 0, 0, 0.2);
+
+    .site-branding {
+        padding-left: 5em;
+
+        a {
+            font-weight: 500;
+        }
+    }
     // @include bp(mobile) {
          
     // }
@@ -52,6 +60,7 @@
         z-index: 10;
         text-align: center;
         font-size: 3em;
+        font-weight: 500;
         transform: translateX(-50vw);
         opacity: 0;
         transition: opacity 0.5s ease-in 0.7s, transfrom 0.5s ease-in 0.7s;
@@ -70,7 +79,7 @@ blockquote {
     padding: 1em 2em;
     box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.5);
     border-radius: 0.2em;
-    margin: 1em 7em;
+    margin: 1.5em 7em;
     background-color: rgb(230, 229, 218);
 
     & p:last-child {
@@ -80,6 +89,29 @@ blockquote {
 }
 
 .site-footer {
-    background-color: #fff;
+    background-color: #910;
+    box-shadow: inset 0 1em 1em -1em rgba(0,0,0,0.5);
+
+    .site-wrapper {
+        display: flex;
+        // margin-top: 3em;
+        padding: 1.5em 0;
+        color: #FFF;
+
+        p {
+            flex: 1 1 50%;
+        }
+    
+        .social {
+            flex: 1 1 50%;
+            text-align: right;
+
+            i {
+                padding-right: 1em;
+                font-size: 1.5em;
+            }
+        }
+    }
+    
 }
 
