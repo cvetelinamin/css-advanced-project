@@ -6,7 +6,7 @@
 .site-header {
     position: relative;
     z-index: 2000;
-    box-shadow: 0 0.5em 0.5em rgba(0, 0, 0, 0.2);
+    box-shadow: var(--header-box-shadow);
 
     .site-branding {
         padding-left: 5em;
@@ -32,7 +32,7 @@
 }
 
 .site-media {
-    height: 60vh;
+    height: var(--site-media-height);
     overflow: hidden;
     background-position: top;
     background-size: cover;
@@ -45,7 +45,7 @@
     &::before {
         display: block;
         content: '';
-        background-color: rgba(0, 0, 0, 0.2);
+        background-color: var(--media-before-color);
         position: absolute;
         top: 0;
         left: 0;
@@ -63,7 +63,7 @@
         font-weight: 500;
         transform: translateX(-50vw);
         opacity: 0;
-        transition: opacity 0.5s ease-in 0.7s, transfrom 0.5s ease-in 0.7s;
+        transition: opacity 0.5s ease-in 0.7s;
     }
 }
 
@@ -75,12 +75,12 @@
 blockquote {
     text-align: center;
     font-style: italic;
-    font-size: 1.5em;
+    font-size: var(--blockquote-font-size);
     padding: 1em 2em;
-    box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.5);
+    box-shadow: var(--blockquote-box-shadow);
     border-radius: 0.2em;
     margin: 1.5em 7em;
-    background-color: rgb(230, 229, 218);
+    background-color: var(--blockquote-background-color);
 
     & p:last-child {
         text-align: right;
@@ -90,11 +90,10 @@ blockquote {
 
 .site-footer {
     background-color: #910;
-    box-shadow: inset 0 1em 1em -1em rgba(0,0,0,0.5);
+    box-shadow: var(--footer-box-shadow);
 
     .site-wrapper {
         display: flex;
-        // margin-top: 3em;
         padding: 1.5em 0;
         color: #FFF;
 

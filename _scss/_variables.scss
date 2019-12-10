@@ -9,6 +9,20 @@
     --layout-width: 70rem;
     --layout-padding-b: 1.0em;
 
+    --header-box-shadow: 0 0.5em 0.5em rgba(0, 0, 0, 0.2);
+    --footer-box-shadow: inset 0 1em 1em -1em rgba(0, 0, 0, 0.8);
+
+    --navigation-footer-color: #910;
+
+    --site-media-height: 90vh;
+    --media-before-color: rgba(0, 0, 0, 0.2);
+
+    --page-about-backimage: url('https://images.unsplash.com/photo-1560026301-88340cf16be7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1868&q=80');
+
+    --blockquote-font-size: 1.5em;
+    --blockquote-box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.5);
+    --blockquote-background-color: rgb(230, 229, 218);
+
     --categories-background-color: #EEE;
     --categories-template-column: 1fr 1fr;
     --categories-template-rows: 1fr 1fr;
@@ -26,6 +40,8 @@
     --lacation-entry-box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.4);
     --entry-meta-font-size: 1.5em;
     --entry-meta-color: #222;
+
+
 
     --gallery-padding-left: 5em;
     --gallery-template-columns: repeat(9, 1fr);

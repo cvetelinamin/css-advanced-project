@@ -6,17 +6,17 @@
             {% if current_page.title %}
     
             <li class="page-title-{{ current_page.title | slugify }}{% if current_page.url == page.url %} current-page{% endif %}">
-                <a href="{{ site.baseurl }}{{ current_page.url }}">{{ current_page.title }}</a>
+                <a href="{{ site.baseurl }}{{ current_page.url }}">{{ current_page.navigation_name }}</a>
             {% if current_page.title == 'Houses' %}
                 <ul>
                     <li>
-                        <a href="/woods-houses/">In the woods</a>
+                        <a href="/woods-houses/">Горски къщи</a>
                     </li>
                     <li>
-                        <a href="/modern-design/">Modern design</a>
+                        <a href="/modern-design/">Модерен дизайн</a>
                     </li>
                     <li>
-                        <a href="/beach-houses/">Beach house</a>
+                        <a href="/beach-houses/">Къщи край плажа</a>
                     </li>
                 </ul>
             {% endif %}
