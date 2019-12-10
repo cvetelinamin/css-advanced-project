@@ -8,6 +8,7 @@
     max-width: 100%;
     padding: 1em 3em;
 
+    
     &.location-woods-houses .entry,
     &.location-modern-design .entry,
     &.location-beach-houses .entry {
@@ -21,6 +22,11 @@
         box-shadow: var(--entry-box-shadow);
         transition: var(--entry-transition);
         margin: 2em 4em;
+
+        @include bp(mobile) {
+            flex-direction: column;
+        }
+    
     }
 
     & .entry:hover{

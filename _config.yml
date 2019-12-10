@@ -3,7 +3,6 @@ email: cvetelina.min.georgieva@gmail.com
 description: Find your dream house
 destination: docs
 baseurl: "/css-advanced-project"
-# baseurl: ""
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll

@@ -7,23 +7,24 @@
     position: relative;
     z-index: 2000;
     box-shadow: var(--header-box-shadow);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
     .site-branding {
         padding-left: 5em;
-
+        
         a {
             font-weight: 500;
         }
-    }
-    // @include bp(mobile) {
-         
-    // }
 
-    @include bp(desktop) {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include bp(mobile) {
+           padding-left: 3em;
+        }
     }
+
+    // @include bp(desktop) {
+    // }
 }
 
 .site-header a {
@@ -64,6 +65,10 @@
         transform: translateX(-50vw);
         opacity: 0;
         transition: opacity 0.5s ease-in 0.7s;
+    }
+
+    @include bp(mobile) {
+        height: 50vh;
     }
 }
 
@@ -109,6 +114,10 @@ blockquote {
                 padding-right: 1em;
                 font-size: 1.5em;
             }
+        }
+
+        @include bp(mobile) {
+            padding-left: 2em;
         }
     }
     

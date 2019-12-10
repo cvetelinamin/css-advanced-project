@@ -32,12 +32,17 @@
             position: absolute;
             bottom: 18%;
             right: 10%;
+
+            @include bp(mobile) {
+                bottom: 52%;
+            }
         }
 
         .button .more {
             background-color: #EEE;
             color: #369;
             padding: 0.5em 1em;
+            border-radius: 0.2em;
         }
 
         .button .less {
@@ -64,6 +69,10 @@
             justify-content: space-between;
             height: 50vh;
             transition: box-shadow 0.5s ease-in;
+
+            @include bp(mobile) {
+                height: 26vh;
+            }
         }
 
         .manager:hover {
@@ -73,6 +82,17 @@
         .img {
             flex: 0 0 30%;
             overflow: hidden;
+            position: relative;
+
+            img {
+                @include bp(mobile) {
+                    width: 100%;
+                    height: auto;
+                    position: absolute;
+                    top: 50%; left:50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
         }
 
         .content {
@@ -107,6 +127,7 @@ input:checked + .site-about .button .less {
     color: #369;
     padding: 0.5em 1em;
     width: 5em;
+    border-radius: 0.2em;
 }
 
 input:checked + .site-about .button .more {
@@ -133,6 +154,11 @@ input:checked + .site-about .button .more {
             background-color: #EEE;
             position: relative;
             // box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.5);
+
+            @include bp(mobile) {
+                height: 29vh;
+                margin: 3em 2em;
+            }
             
             &:nth-child(even) {
                 flex-direction: row-reverse;

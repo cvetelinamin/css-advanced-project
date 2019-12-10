@@ -114,6 +114,8 @@
     }
 
     &-lable {
+        margin-right: 3em;
+
         @include bp(desktop) {
             display: none;
         }

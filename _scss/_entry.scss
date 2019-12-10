@@ -4,6 +4,11 @@
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+
+    @include bp(mobile) {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
     
     &.location-home .entry,
     &.location-houses .entry {
@@ -19,6 +24,10 @@
         overflow: hidden;
         transition: var(--entry-transition);
         margin: 3em 0;
+
+        @include bp(mobile) {
+            flex: 0 0 40%;
+        }
     }
     
     &.location-home .entry:hover,
