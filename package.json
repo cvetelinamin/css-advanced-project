@@ -1,7 +1,6 @@
 {
   "name": "projectcss",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "directories": {
     "doc": "docs"
@@ -30,5 +29,6 @@
   "bugs": {
     "url": "https://github.com/cvetelinamin/css-advanced-project/issues"
   },
-  "homepage": "https://github.com/cvetelinamin/css-advanced-project#readme"
+  "homepage": "https://github.com/cvetelinamin/css-advanced-project#readme",
+  "description": ""
 }
