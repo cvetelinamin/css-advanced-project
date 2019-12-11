@@ -56,6 +56,22 @@
     justify-content: center;
     align-items: center;
     
+    @include bp(mobile) {
+        height: 80vh;
+    }
+
+    @include bp(tablet) {
+        height: 70vh;
+    }
+
+    @include bp(medium-phone) {
+        height: 40vh;
+    }
+
+    @include bp(small-phone) {
+        height: 35vh;
+    }
+    
     &::before {
         display: block;
         content: '';
@@ -84,21 +100,6 @@
         }
     }
 
-    @include bp(mobile) {
-        height: 50vh;
-    }
-
-    @include bp(mobile) {
-        height: 40vh;
-    }
-
-    @include bp(medium-phone) {
-        height: 30vh;
-    }
-
-    @include bp(small-phone) {
-        height: 20vh;
-    }
 }
 
 .loaded .site-media h2 {

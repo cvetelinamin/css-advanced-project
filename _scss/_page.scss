@@ -74,15 +74,10 @@
     .team-info {
         margin: 1em 3em;
         
-        @include bp(phone){
-            flex: 0 0 50%;
-            margin-bottom: 1em;
-        }
-
-        @include bp(medium-phone) {
+        @include bp(small-tablet) {
             margin: 1em;
         }
-
+        
         .manager {
             border: 1px solid rgba(0, 0, 0, 0.3);
             padding: 1em;
@@ -92,26 +87,30 @@
             height: 50vh;
             transition: box-shadow 0.5s ease-in;
 
-            @include bp(mobile) {
-                height: 26vh;
+            @include bp(big-tablet) {
+                height: 65vh;
             }
 
-            @include bp(small-tablet){
-                height: 22vh;
+            @include bp(tablet) {
+                padding: 0.5em;
             }
 
-            @include bp(phone){
+            @include bp(small-tablet) {
+                height: 50vh;
+            }
+            
+            @include bp(phone) {
                 flex-direction: column;
-                height: 35vh;
+                height: 70vh;
             }
 
             @include bp(medium-phone) {
-                margin: 1em 0;
-                height: 40vh;
+                height: 90vh;
             }
-
+            
             @include bp(small-phone) {
-                height: 42vh;
+                height: 80vh;
+                padding: 0;
             }
         }
 
@@ -124,8 +123,8 @@
             overflow: hidden;
             position: relative;
 
-            @include bp(phone) {
-                flex: 1 1 40%;
+            @include bp(medium-phone) {
+                flex: 1 0 40%;
             }
 
             img {
@@ -134,12 +133,19 @@
                     height: auto;
                     position: absolute;
                     top: 50%; left:50%;
-                    transform: translate(-50%, -40%);
+                    transform: translate(-50%, -50%);
+
+                    @include bp(tablet){
+                        width: auto;
+                        height: 100%;
+                    }
 
                     @include bp(phone){
                         transform: translate(-50%, -25%);
-                        width: auto;
-                        height: 250%;
+                        height: 200%;
+                    }
+
+                    @include bp(medium-phone){
                     }
                 }
             }
@@ -160,16 +166,20 @@
                 font-size: 0.8em;
             }
 
-            // @include bp(medium-phone) {
-            //     flex: 0 0 60%;
-            // }
+            @include bp(medium-phone){
+                font-size: 0.7em;
+            }
+
+            @include bp(small-phone){
+                font-size: 0.6em;
+            }
 
             .name {
                 font-size: 1.2em;
-
-                @include bp(tablet){
-                    padding-bottom: 0;
-                }
+                padding: 1em 0;
+                // @include bp(tablet){
+                //     padding-bottom: 0;
+                // }
 
                 @include bp(small-tablet){
                     font-size: 1em;
@@ -243,21 +253,30 @@ input:checked + .site-about .button .more {
             position: relative;
             // box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.5);
 
-            @include bp(mobile) {
-                height: 29vh;
+            @include bp(big-tablet) {
+                height: 70vh;
                 margin: 3em 2em;
             }
 
             @include bp(small-tablet) {
-                height: 34vh;
+                height: 85vh;
                 margin: 3em 2em;
             }
 
             @include bp(phone) {
                 flex-direction: column;
                 margin: 3em 1.5em;
+                height: 70vh;
+            }
+
+            @include bp(medium-phone) {
+                height: 90vh;
             }
             
+            @include bp(small-phone) {
+                height: 110vh;
+            }
+
             &:nth-child(even) {
                 flex-direction: row-reverse;
 
@@ -265,7 +284,6 @@ input:checked + .site-about .button .more {
                     border-left: 1px solid black;
                     border-right: none;
                 }
-
                 
                 @include bp(phone) {
                     flex-direction: column;
@@ -284,6 +302,10 @@ input:checked + .site-about .button .more {
                 flex: 0 1 40%;
             }
 
+            @include bp(medium-phone) {
+                flex: 1 0 40%;
+            }
+
             img {
                 position: absolute;
                 top: 50%;
@@ -295,7 +317,11 @@ input:checked + .site-about .button .more {
                 }
 
                 @include bp(medium-phone) {
-                    height: 100%;
+                    height: 150%;
+                }
+
+                @include bp(small-phone) {
+                    height: 110%;
                 }
             }
         }
@@ -372,12 +398,28 @@ input:checked + .site-about .button .more {
             flex-direction: column-reverse;
             padding: 0 3em;
         }
+
+        @include bp(medium-phone) {
+            padding: 0 2em;
+        }
+
+        @include bp(small-phone) {
+            padding: 0 1em;
+        }
     }
 
     .form {
         flex: 0 0 35%;
         height: 50vh;
         margin: 3em 1em;
+
+        @include bp(medium-phone) {
+            margin: 1em;
+        }
+
+        @include bp(small-phone) {
+            margin: 0.5em;
+        }
 
         input {
             display: block;

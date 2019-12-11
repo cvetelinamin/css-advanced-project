@@ -25,13 +25,16 @@
         background-color: var(--entry-background-color);
         position: relative;
         z-index: 30;
-        /* top: -3em; */
         box-shadow: var(--entry-box-shadow);
         transition: var(--entry-transition);
         margin: 2em 4em;
 
         @include bp(mobile) {
             flex-direction: column;
+        }
+
+        @include bp(big-tablet) {
+            height: 35em;
         }
 
         @include bp(tablet) {
@@ -57,7 +60,7 @@
     }
 
     .entry-media {
-        flex: 1 1 50%;
+        flex: 0 1 50%;
         position: relative;
         overflow: hidden;
 
@@ -84,15 +87,17 @@
     }
 
     .entry-content{
-        flex: 1 1 50%;
-        // box-shadow:  var(--entry-content-shadow);
+        flex: 1 0 50%;
+        box-shadow:  var(--entry-content-shadow);
         padding: 2em;
+        display: flex;
+        justify-content: space-between;
 
         p:nth-of-type(2) {
             padding: 0;
         }
 
-        @include bp(tablet) {
+        @include bp(big-tablet) {
             padding: 1em;
         }
 
