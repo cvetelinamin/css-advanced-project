@@ -10,6 +10,15 @@
         justify-content: space-around;
     }
     
+    @include bp(phone) {
+        display: block;
+    }
+
+    // @include bp(small-tablet) {
+    //     flex-direction: column;
+    //     flex-wrap: nowrap;
+    // }
+    
     &.location-home .entry,
     &.location-houses .entry {
         flex: 0 0 30%;
@@ -28,6 +37,15 @@
         @include bp(mobile) {
             flex: 0 0 40%;
         }
+
+        @include bp(tablet) {
+            height: 30em;
+        }
+
+        @include bp(phone) {
+            margin: 3em 4em;
+        }
+    
     }
     
     &.location-home .entry:hover,
@@ -37,7 +55,7 @@
     
     &.location-home .entry-media,
     &.location-houses .entry-media {
-        flex: 0 0 50%;
+        flex: 1 0 50%;
         position: relative;
         overflow: hidden;
 
@@ -59,18 +77,27 @@
 }
 
 .entry-content{
-    flex: 0 0 50%;
+    flex: 1 1 50%;
     background-color: #FFF;
     z-index: 20;
     box-shadow:  var(--entry-content-shadow);
     padding: 2em;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
 
     & p:last-child {
         text-align: right;
         font-size: 0.8em;
+    }
+
+    & > p:nth-of-type(2)
+    {
+        @include bp(small-tablet)
+        {
+            padding: 0;
+            font-size: 0.9em;
+        }   
     }
 }
 
@@ -78,6 +105,11 @@
     padding-bottom: 0.5rem;
     font-weight: 500;
     text-align: center;
+
+    @include bp(tablet)
+    {
+        padding: 0;
+    }
 
     a {
         font-size: 0.9em;
@@ -95,5 +127,10 @@
 
     a {
         font-size: var(--entry-meta-font-size);
+    }
+
+    @include bp(small-tablet)
+    {
+        padding: 0;
     }
 }

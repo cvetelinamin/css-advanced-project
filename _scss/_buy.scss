@@ -8,6 +8,10 @@
     max-width: 100%;
     padding: 1em 3em;
 
+    @include bp(small-tablet) {
+        display: block;
+    }
+
     
     &.location-woods-houses .entry,
     &.location-modern-design .entry,
@@ -26,6 +30,15 @@
         @include bp(mobile) {
             flex-direction: column;
         }
+
+        @include bp(tablet) {
+            height: 30em;
+            margin: 2em;
+        }
+
+        @include bp(small-tablet) {
+            margin-bottom: 2em;
+        }
     
     }
 
@@ -34,7 +47,7 @@
     }
 
     .entry-media {
-        flex: 0 0 50%;
+        flex: 1 0 50%;
         position: relative;
         overflow: hidden;
 
@@ -45,6 +58,13 @@
             top: 50%; left:50%;
             transform: translate(-50%, -50%);
             transition: var(--entry-img-transition);
+
+            @include bp(tablet) {
+                top: 40%;
+            }
+
+            @include bp(small-tablet) {
+            }
         }
 
         &:hover img {
@@ -53,15 +73,27 @@
     }
 
     .entry-content{
-        flex: 0 0 50%;
-        z-index: 20;
-        box-shadow:  var(--entry-content-shadow);
+        flex: 1 1 50%;
+        // box-shadow:  var(--entry-content-shadow);
         padding: 2em;
+
+        p:nth-of-type(2) {
+            padding: 0;
+        }
+
+        @include bp(tablet) {
+            padding: 1em;
+        }
     }
 
     .entry-title {
         padding-bottom: 0.5rem;
         font-weight: 500;
         font-size: var(--entry-title-font-size);
+
+        @include bp(tablet) {
+            padding: 0;
+        }
+
     }
 }

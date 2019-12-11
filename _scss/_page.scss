@@ -28,13 +28,13 @@
             padding-top: 1em;
         }
 
-        .button {
-            position: absolute;
-            bottom: 18%;
-            right: 10%;
-
-            @include bp(mobile) {
-                bottom: 52%;
+        .button-show {
+            position: relative;
+            
+            .button {
+                position: absolute;
+                bottom: 5%;
+                right: 3%;
             }
         }
 
@@ -73,6 +73,16 @@
             @include bp(mobile) {
                 height: 26vh;
             }
+
+            @include bp(small-tablet){
+                height: 22vh;
+            }
+
+            @include bp(phone){
+                flex-direction: column;
+                height: 45vh;
+            }
+
         }
 
         .manager:hover {
@@ -91,15 +101,41 @@
                     position: absolute;
                     top: 50%; left:50%;
                     transform: translate(-50%, -50%);
+
+                    @include bp(phone){
+                        transform: translate(-50%, -25%);
+                        width: auto;
+                        height: 250%;
+                    }
                 }
+            }
+
+            @include bp(phone){
+                flex: 0 0 50%;
+                margin-bottom: 1em;
             }
         }
 
         .content {
             flex: 0 0 60%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            @include bp(small-tablet){
+                font-size: 0.8em;
+            }
+            
+            @include bp(phone){
+                flex: 0 0 50%;
+            }
 
             .name {
                 font-size: 1.2em;
+
+                @include bp(small-tablet){
+                    font-size: 1em;
+                }
             }
 
             .title,
@@ -107,6 +143,10 @@
             .phone {
                 font-size: 0.8em;
                 opacity: 0.8;
+
+                @include bp(small-tablet){
+                    font-size: 0,6em;
+                }
             }
         }
     }
@@ -119,6 +159,10 @@ input {
 input:checked + .site-about .info {
     display: flex;
     justify-content: space-between;
+    
+    @include bp(tablet){
+        flex-direction: column;
+    }
 }
 
 input:checked + .site-about .button .less {
@@ -159,6 +203,17 @@ input:checked + .site-about .button .more {
                 height: 29vh;
                 margin: 3em 2em;
             }
+
+            @include bp(small-tablet) {
+                height: 34vh;
+                margin: 3em 2em;
+            }
+
+            @include bp(phone) {
+                flex-direction: column;
+                margin: 3em;
+
+            }
             
             &:nth-child(even) {
                 flex-direction: row-reverse;
@@ -167,11 +222,16 @@ input:checked + .site-about .button .more {
                     border-left: 1px solid black;
                     border-right: none;
                 }
+
+                
+                @include bp(phone) {
+                    flex-direction: column;
+                }
             }
         }
 
         .img {
-            flex: 0 0 50%;
+            flex: 0 1 50%;
             border-right: 1px solid black;
             overflow: hidden;
             box-shadow: inset 0 0 1.5em #888888;
@@ -186,13 +246,18 @@ input:checked + .site-about .button .more {
         }
 
         .content {
-            flex: 0 0 50%;
+            flex: 1 0 50%;
             padding: 1em 2em;
             box-shadow:inset 0 0 1em #888888;
 
             h2 {
                 font-weight: 500;
+
+                @include bp(small-tablet) {
+                    font-size: 1.5em;
+                }
             }
+
         }
     }
 }
@@ -207,6 +272,11 @@ input:checked + .site-about .button .more {
         margin: 0 auto;
         display: flex;
         justify-content: space-around;
+
+        @include bp(phone) {
+            flex-direction: column-reverse;
+            padding: 0 3em;
+        }
     }
 
     .form {
@@ -218,7 +288,7 @@ input:checked + .site-about .button .more {
             display: block;
             width: 100%;
             padding: 0.5em 1em;
-            margin-bottom: 1em;
+            margin-bottom: 1.2em;
         }
 
         .message {
@@ -230,6 +300,10 @@ input:checked + .site-about .button .more {
             background-color: orange;
             border-radius: 0.5em;
             border: none;
+        }
+
+        @include bp(small-tablet) {
+            flex: 0 0 40%;
         }
     }
 
@@ -244,8 +318,10 @@ input:checked + .site-about .button .more {
         p {
             font-size: 0.8em;
         }
+
+        
+        @include bp(small-tablet) {
+            flex: 0 0 45%;
+        }
     }
 }
-// input:checked + .site-about {
-//     background-position: center;
-// }

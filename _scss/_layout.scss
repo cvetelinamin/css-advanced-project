@@ -21,6 +21,10 @@
         @include bp(mobile) {
            padding-left: 3em;
         }
+
+        @include bp(phone) {
+            padding-left: 2em;
+         }
     }
 
     // @include bp(desktop) {
@@ -70,6 +74,10 @@
     @include bp(mobile) {
         height: 50vh;
     }
+
+    @include bp(mobile) {
+        height: 40vh;
+    }
 }
 
 .loaded .site-media h2 {
@@ -90,6 +98,14 @@ blockquote {
     & p:last-child {
         text-align: right;
         font-size: 0.8em;
+    }
+
+    @include bp(tablet) {
+        margin: 1.5em 3em;
+    }
+
+    @include bp(small-tablet) {
+        margin: 1.5em 3em;
     }
 }
 
@@ -119,6 +135,10 @@ blockquote {
         @include bp(mobile) {
             padding-left: 2em;
         }
+    }
+
+    @include bp(phone) {
+        margin-top: 2em;
     }
     
 }
