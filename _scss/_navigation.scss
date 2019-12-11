@@ -110,14 +110,29 @@
     &:checked + .site .site-header .site-nav {
         @include bp(mobile) {
             display: block;
+            position: absolute;
+            right: 0;
+            top: 70%;
+            background-color: #910;
         }
     }
 
     &-lable {
         margin-right: 3em;
+        background-color: #910;
+        color: #FFF;
+        padding: 0.5em 1em;
 
         @include bp(desktop) {
             display: none;
+        }
+
+        @include bp(phone) {
+            margin-right: 2em;
+        }
+
+        @include bp(medium-phone) {
+            margin-right: 1em;
         }
     }
 }

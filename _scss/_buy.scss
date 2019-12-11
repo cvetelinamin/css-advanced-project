@@ -12,6 +12,10 @@
         display: block;
     }
 
+    @include bp(phone) {
+        padding: 1em;
+    }
+
     
     &.location-woods-houses .entry,
     &.location-modern-design .entry,
@@ -39,7 +43,14 @@
         @include bp(small-tablet) {
             margin-bottom: 2em;
         }
-    
+
+        @include bp(medium-phone) {
+            margin: 1em;
+        }
+
+        @include bp(small-phone) {
+            margin: 0.5em;
+        }
     }
 
     & .entry:hover{
@@ -47,7 +58,7 @@
     }
 
     .entry-media {
-        flex: 1 0 50%;
+        flex: 1 1 50%;
         position: relative;
         overflow: hidden;
 
@@ -63,7 +74,8 @@
                 top: 40%;
             }
 
-            @include bp(small-tablet) {
+            @include bp(phone) {
+                flex: 1 1 60%;
             }
         }
 
@@ -83,6 +95,10 @@
 
         @include bp(tablet) {
             padding: 1em;
+        }
+
+        @include bp(phone) {
+            flex: 1 1 40%;
         }
     }
 

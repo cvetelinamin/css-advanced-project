@@ -11,6 +11,20 @@
             background-color: rgba(0, 0, 0, 0.5);
             margin: 0 3em;
             padding: 2em 3em;
+
+            @include bp(tablet) {
+                margin: 0 1em;
+                padding: 2em;
+            }
+
+            @include bp(medium-phone) {
+                margin: 0 1em;
+                padding: 1em;
+            }
+
+            @include bp(small-phone) {
+                margin: 0;
+            }
         }
 
         h2 {
@@ -33,8 +47,7 @@
             
             .button {
                 position: absolute;
-                bottom: 5%;
-                right: 3%;
+                right: 0%;
             }
         }
 
@@ -52,14 +65,23 @@
         .mission {
             flex: 0 0 45%;
         }
-
+        
         .team {
             flex: 0 0 45%;
         }
     }
-
+    
     .team-info {
         margin: 1em 3em;
+        
+        @include bp(phone){
+            flex: 0 0 50%;
+            margin-bottom: 1em;
+        }
+
+        @include bp(medium-phone) {
+            margin: 1em;
+        }
 
         .manager {
             border: 1px solid rgba(0, 0, 0, 0.3);
@@ -80,9 +102,17 @@
 
             @include bp(phone){
                 flex-direction: column;
-                height: 45vh;
+                height: 35vh;
             }
 
+            @include bp(medium-phone) {
+                margin: 1em 0;
+                height: 40vh;
+            }
+
+            @include bp(small-phone) {
+                height: 42vh;
+            }
         }
 
         .manager:hover {
@@ -93,6 +123,10 @@
             flex: 0 0 30%;
             overflow: hidden;
             position: relative;
+
+            @include bp(phone) {
+                flex: 0 0 40%;
+            }
 
             img {
                 @include bp(mobile) {
@@ -109,11 +143,6 @@
                     }
                 }
             }
-
-            @include bp(phone){
-                flex: 0 0 50%;
-                margin-bottom: 1em;
-            }
         }
 
         .content {
@@ -122,16 +151,25 @@
             flex-direction: column;
             justify-content: space-between;
 
+            
+            @include bp(phone){
+                flex: 0 0 60%;
+            }
+            
             @include bp(small-tablet){
                 font-size: 0.8em;
             }
-            
-            @include bp(phone){
-                flex: 0 0 50%;
-            }
+
+            // @include bp(medium-phone) {
+            //     flex: 0 0 60%;
+            // }
 
             .name {
                 font-size: 1.2em;
+
+                @include bp(tablet){
+                    padding-bottom: 0;
+                }
 
                 @include bp(small-tablet){
                     font-size: 1em;
@@ -146,6 +184,12 @@
 
                 @include bp(small-tablet){
                     font-size: 0,6em;
+                }
+            }
+
+            .phone {
+                @include bp(tablet){
+                    padding-bottom: 0;
                 }
             }
         }
@@ -211,8 +255,7 @@ input:checked + .site-about .button .more {
 
             @include bp(phone) {
                 flex-direction: column;
-                margin: 3em;
-
+                margin: 3em 1.5em;
             }
             
             &:nth-child(even) {
@@ -231,24 +274,46 @@ input:checked + .site-about .button .more {
         }
 
         .img {
-            flex: 0 1 50%;
+            flex: 1 1 50%;
             border-right: 1px solid black;
             overflow: hidden;
             box-shadow: inset 0 0 1.5em #888888;
             position: relative;
+
+            @include bp(phone) {
+                flex: 0 1 40%;
+            }
 
             img {
                 position: absolute;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
+
+                @include bp(phone) {
+                    width: 100%;
+                }
+
+                @include bp(medium-phone) {
+                    height: 100%;
+                }
             }
         }
 
         .content {
-            flex: 1 0 50%;
+            flex: 1 1 50%;
             padding: 1em 2em;
             box-shadow:inset 0 0 1em #888888;
+
+            @include bp(phone) {
+                font-size: 0.8em;
+                padding: 1em;
+                flex: 1 0 60%;
+            }
+
+            @include bp(small-phone) {
+                padding: 0.5em;
+            }
 
             h2 {
                 font-weight: 500;
@@ -256,8 +321,12 @@ input:checked + .site-about .button .more {
                 @include bp(small-tablet) {
                     font-size: 1.5em;
                 }
-            }
 
+                @include bp(phone) {
+                    padding: 0.5em 0;
+                }
+    
+            }
         }
     }
 }
@@ -265,6 +334,32 @@ input:checked + .site-about .button .more {
 .page-contacts {
     .site-iframe {
         margin-bottom: 2em;
+
+        iframe {
+            @include bp(big-tablet) {
+                width: 1024px;
+            }
+
+            @include bp(tablet) {
+                width: 960px;
+            }
+
+            @include bp(small-tablet) {
+                width: 768px;
+            }
+
+            @include bp(phone) {
+                width: 640px;
+            }
+
+            @include bp(medium-phone) {
+                width: 480px;
+            }
+
+            @include bp(small-phone) {
+                width: 320px;
+            }
+        }
     }
 
     .info {

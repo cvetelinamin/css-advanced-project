@@ -5,16 +5,12 @@ $breakpoints: (
   'small-tablet':    ( max-width:  768px ),
   'tablet':          ( max-width:  960px ),
   'big-tablet':      ( max-width: 1024px ),
-  'mobile':          ( max-width: 1299px ),
-  'desktop':         ( min-width: 1300px ),
+  'mobile':          ( max-width: 1200px ),
+  'desktop':         ( min-width: 1201px ),
   'large':           ( min-width: 1600px )
 
 ) !default;
 
-/// Mixin to manage responsive breakpoints
-/// @author Hugo Giraudel
-/// @param {String} $breakpoint - Breakpoint name
-/// @require $breakpoints
 @mixin bp($breakpoint) {
     // If the key exists in the map
     @if map-has-key($breakpoints, $breakpoint) {

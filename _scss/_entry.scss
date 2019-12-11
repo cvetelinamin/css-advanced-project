@@ -12,13 +12,9 @@
     
     @include bp(phone) {
         display: block;
+        padding-bottom: 1em;
     }
 
-    // @include bp(small-tablet) {
-    //     flex-direction: column;
-    //     flex-wrap: nowrap;
-    // }
-    
     &.location-home .entry,
     &.location-houses .entry {
         flex: 0 0 30%;
@@ -28,7 +24,6 @@
         background-color: #F8F8F8;
         position: relative;
         z-index: 30;
-        /* top: -3em; */
         box-shadow: var(--lacation-entry-box-shadow);
         overflow: hidden;
         transition: var(--entry-transition);
@@ -43,9 +38,9 @@
         }
 
         @include bp(phone) {
-            margin: 3em 4em;
+            margin: 2em;
         }
-    
+
     }
     
     &.location-home .entry:hover,
@@ -55,9 +50,17 @@
     
     &.location-home .entry-media,
     &.location-houses .entry-media {
-        flex: 1 0 50%;
+        flex: 1 1 50%;
         position: relative;
         overflow: hidden;
+        
+        @include bp(phone) {
+            flex: 1 1 60%;
+        }
+
+        @include bp(small-phone) {
+            flex: 1 1 50%;
+        }
 
         & img {
             display: block;
@@ -98,6 +101,10 @@
             padding: 0;
             font-size: 0.9em;
         }   
+    }
+
+    @include bp(phone) {
+        flex: 1 1 40%;
     }
 }
 
