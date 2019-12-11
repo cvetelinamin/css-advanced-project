@@ -120,12 +120,12 @@
         }
 
         .img {
-            flex: 0 0 30%;
+            flex: 1 1 30%;
             overflow: hidden;
             position: relative;
 
             @include bp(phone) {
-                flex: 0 0 40%;
+                flex: 1 1 40%;
             }
 
             img {
@@ -134,7 +134,7 @@
                     height: auto;
                     position: absolute;
                     top: 50%; left:50%;
-                    transform: translate(-50%, -50%);
+                    transform: translate(-50%, -40%);
 
                     @include bp(phone){
                         transform: translate(-50%, -25%);
@@ -146,14 +146,14 @@
         }
 
         .content {
-            flex: 0 0 60%;
+            flex: 1 1 60%;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-
+            padding-left: 1em;
             
             @include bp(phone){
-                flex: 0 0 60%;
+                flex: 1 1 60%;
             }
             
             @include bp(small-tablet){
