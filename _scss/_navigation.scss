@@ -6,7 +6,6 @@
     @include bp(mobile) {
         display: none;
     }
-
         ul {
             padding: 0;
             margin: 0;
@@ -20,7 +19,7 @@
                 transition: opacity 0.5s ease-in, transform 0.5s ease-in;
             
                 @for $i from 1 through 5 {
-                    &:nth-child(#{$i}){transition-delay: $i * 0.1s;}
+                        &:nth-child(#{$i}){transition-delay: $i * 0.1s;}
                 }
 
                 .loaded & {
@@ -30,6 +29,10 @@
 
                 &:hover > ul {
                     display: block;
+
+                    @include bp(mobile) {
+                        display: none;
+                    }
                 }
             }
 
