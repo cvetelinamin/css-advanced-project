@@ -10,11 +10,22 @@
 }
 
 .gallery {
-    padding-left: var(--gallery-padding-left);
     display: grid;
     grid-template-columns: var(--gallery-template-columns);
     grid-auto-flow: dense;
     grid-gap: var(--gallery-gap);
+
+    @include bp(big-tablet) {
+        grid-template-columns: repeat(6, 1fr);
+        grid-gap: 0.5em;
+        padding: 1em;
+    }
+
+    @include bp(medium-phone) {
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 0.5em;
+        padding: 1em;
+    }
 
     li {
         display: block;
@@ -33,6 +44,11 @@
         &.portrait {
             grid-row: var(--portrait-row-span);
             grid-column: var(--portrait-column-span);
+
+            @include bp(small-tablet) {
+                grid-row: span 2;
+            }
+
             &:before {
                 padding-top: var(--portrait-padding-top);
             }
@@ -44,6 +60,11 @@
             img {
                 width: 100%;
                 height: auto;
+            
+                @include bp(small-tablet) {
+                    height: 100%;
+                    width: 120%;
+                }
             }
             
             &::before {
@@ -76,10 +97,22 @@
 .row {
     display: flex;
 
+    @include bp(mobile) {
+        flex-wrap: wrap;
+    }
+
     p {
         flex: 0 0 25%;
         padding: 1em 2em;
         color: var(--ad-content-color);
+
+        @include bp(big-tablet) {
+            flex: 1 1 50%;
+        }
+
+        @include bp(medium-phone) {
+            padding: 1em;
+        }
     }
 }
 
@@ -92,12 +125,18 @@
     color: #787878;
     border-bottom: 1px solid var(--ad-content-color);
     padding-top: 2em;
+
+    @include bp(small-tablet) {
+        padding-left: 2em;
+        padding-right: 2em;
+    }
 }
 
 .characteristics {
     color: #787878;
     border-bottom: 1px solid var(--ad-content-color);
     padding-top: 1em;
+
 
     h3 {
         padding-left: 1em;
@@ -106,9 +145,18 @@
     & > div {
         display: flex;
 
+        @include bp(mobile) {
+            flex-wrap: wrap;
+        }
+    
+
         & p {
-            flex: 0 0 25%;
+            flex: 1 1 25%;
             padding: 1em 3em;
+
+            @include bp(big-tablet) {
+                flex: 1 1 50%;
+            }
         }
     }
 }
@@ -121,6 +169,13 @@
         padding-bottom: 1em;
         padding-left: 1em;
     }
+
+    .iframe {
+        padding: 0 1em;
+        width: 100%;
+        height: 400px;
+    }
+
     iframe {
         border: 1px solid var(--iframe-border-color);
     }

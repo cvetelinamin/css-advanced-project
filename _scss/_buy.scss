@@ -57,6 +57,7 @@
         }
 
         @include bp(medium-phone) {
+            height: 75vh;
             margin: 2em 1em;
         }
 
@@ -135,9 +136,9 @@
             padding: 1em;
         }
 
-        // @include bp(small-tablet) {
-        //     flex: 1 1 40%;
-        // }
+        @include bp(medium-phone) {
+            font-size: 0.9em;
+        }
     }
 
     .entry-title {
