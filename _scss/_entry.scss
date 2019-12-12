@@ -94,6 +94,10 @@
                 width: 100%;
             }
 
+            @include bp(medium-phone) {
+                width: 140%;
+            }
+
             @include bp(small-phone) {
                 width: 130%;
             }
