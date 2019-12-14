@@ -81,7 +81,10 @@
             }
         }
 
-    li:hover > a,
+    
+
+    
+    
     a:hover,
     a:focus,
     .current-page a {
@@ -115,9 +118,15 @@
         @include bp(mobile) {
             display: block;
             position: absolute;
-            right: 0;
+            right: 0%;
             top: 70%;
             background-color: var(--navigation-footer-color);
+            padding-right: 0.5em;
+
+            li:hover > a {
+                background-color: #fff;
+                color: black;
+            }
         }
     }
 
