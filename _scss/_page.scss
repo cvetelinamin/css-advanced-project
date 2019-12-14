@@ -85,8 +85,14 @@ $landscape-padding-top: 56.25%;
     .team-info {
         margin: 1em 3em;
 
-        @include bp(small-tablet) {
+        @include bp(mobile) {
+            display: flex;
+            flex-direction: row;
             margin: 1em;
+        }
+
+        @include bp(medium-phone) {
+            flex-direction: column;
         }
 
         .manager {
@@ -99,24 +105,25 @@ $landscape-padding-top: 56.25%;
             transition: box-shadow 0.5s ease-in;
 
             @include bp(mobile) {
-                height: 65vh;
+                flex-direction: column;
+                height: 140vh;
             }
 
             @include bp(tablet) {
-                height: 72vh;
+                height: 145vh;
                 padding: 0.5em;
             }
 
             @include bp(small-tablet) {
-                height: 52vh;
+                height: 120vh;
             }
 
             @include bp(phone) {
-                flex-direction: column;
+                height: 90vh;
             }
 
             @include bp(medium-phone) {
-                height: 91vh;
+                height: 97vh;
             }
 
             @include bp(small-phone) {
@@ -130,7 +137,7 @@ $landscape-padding-top: 56.25%;
         }
 
         .img {
-            flex: 1 1 30%;
+            flex: 1 0 40%;
             overflow: hidden;
             position: relative;
 
@@ -138,6 +145,7 @@ $landscape-padding-top: 56.25%;
                 padding-top: 56.25%;
             }
 
+            
             @include bp(medium-phone) {
                 flex: 1 0 40%;
             }
@@ -152,7 +160,7 @@ $landscape-padding-top: 56.25%;
                     }
 
                     @include bp(mobile) {
-                        transform: translate(-50%, -45%);
+                        transform: translate(-50%, -35%);
                     }
 
                     @include bp(tablet){
@@ -169,7 +177,7 @@ $landscape-padding-top: 56.25%;
         }
 
         .content {
-            flex: 1 1 60%;
+            flex: 0 1 60%;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
