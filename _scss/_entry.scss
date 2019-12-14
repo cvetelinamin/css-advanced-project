@@ -28,7 +28,7 @@
         box-shadow: var(--lacation-entry-box-shadow);
         overflow: hidden;
         transition: var(--entry-transition);
-        margin: 3em 0;
+        margin: 3em 1em;
 
         @include bp(mobile) {
             flex: 0 0 40%;
@@ -40,9 +40,6 @@
 
         @include bp(small-tablet) {
             height: 35em;
-        }
-
-        @include bp(phone) {
             margin: 2em 1em;
         }
         

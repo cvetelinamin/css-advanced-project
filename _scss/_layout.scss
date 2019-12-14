@@ -139,11 +139,10 @@ blockquote {
 .site-footer {
     background-color: #910;
     box-shadow: var(--footer-box-shadow);
-    margin-top: 1em;
-    
+
     .site-wrapper {
         display: flex;
-        padding: 1.5em 0;
+        padding: 1.5em 1em;
         color: #FFF;
 
         @include bp(mobile) {
