@@ -62,18 +62,7 @@
         flex: 1 1 50%;
         position: relative;
         overflow: hidden;
-        
-        @include bp(phone) {
-            flex: 1 1 60%;
-        }
-
-        @include bp(tablet) {
-            flex: 1 0 50%;
-        }
-
-        @include bp(small-phone) {
-            flex: 1 1 50%;
-        }
+        padding-top: 56.25%;
 
         & img {
             display: block;
@@ -84,23 +73,6 @@
             transform: translate(-50%, -50%);
             transform-origin: center;
             transition: transform 0.3s ease-in-out;
-
-            @include bp(small-tablet) {
-                width: 120%;
-            }
-
-            @include bp(phone) {
-                height: 110%;
-                width: 100%;
-            }
-
-            @include bp(medium-phone) {
-                width: 140%;
-            }
-
-            @include bp(small-phone) {
-                width: 130%;
-            }
         }
 
         &:hover img {
