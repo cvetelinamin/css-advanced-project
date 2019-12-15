@@ -1,12 +1,24 @@
+$categories-background-color: #EEE;
+$categories-template-column: 1fr 1fr;
+$categories-template-rows: 1fr 1fr;
+$category-entry-height: 55vh;
+$entry-background-color: #F8F8F8;
+$entry-box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.3);
+$entry-transition: box-shadow 0.5s ease-in;
+$entry-hover-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.8);
 $portrait-padding-top: 178%;
+$entry-img-transition: transform 0.5s ease-in-out;
+$entry-img-hover-transform: translate(-50%, -50%) scale(1.1);
+$entry-content-shadow: 0 0 1.5em 0 rgba(0, 0, 0, 0.1);
+$entry-title-font-size: 1.4em;
 
 .site-main .categories.location-woods-houses,
 .site-main .categories.location-modern-design,
 .site-main .categories.location-beach-houses {
-    background-color: var(--categories-background-color);
+    background-color: $categories-background-color;
     display: grid;
-    grid-template-columns: var(--categories-template-column);
-    grid-template-rows: var(--categories-template-rows);
+    grid-template-columns: $categories-template-column;
+    grid-template-rows: $categories-template-rows;
     max-width: 100%;
     padding: 1em 3em;
 
@@ -27,13 +39,13 @@ $portrait-padding-top: 178%;
     &.location-modern-design .entry,
     &.location-beach-houses .entry {
         display: flex;
-        height: var(--category-entry-height);
+        height: $category-entry-height;
         flex-direction: row;
-        background-color: var(--entry-background-color);
+        background-color: $entry-background-color;
         position: relative;
         z-index: 30;
-        box-shadow: var(--entry-box-shadow);
-        transition: var(--entry-transition);
+        box-shadow: $entry-box-shadow;
+        transition: $entry-transition;
         margin: 2em 4em;
 
         @include bp(mobile) {
@@ -67,7 +79,7 @@ $portrait-padding-top: 178%;
     }
 
     & .entry:hover{
-        box-shadow: var(--entry-hover-shadow);
+        box-shadow: $entry-hover-shadow;
     }
 
     .entry-media {
@@ -89,7 +101,7 @@ $portrait-padding-top: 178%;
             position: absolute;
             top: 50%; left:50%;
             transform: translate(-50%, -50%);
-            transition: var(--entry-img-transition);
+            transition: $entry-img-transition;
 
             @include bp(desktop) {
                 width: 110%;
@@ -111,13 +123,13 @@ $portrait-padding-top: 178%;
         }
 
         &:hover img {
-            transform: var(--entry-img-hover-transform);
+            transform: $entry-img-hover-transform;
         }
     }
 
     .entry-content{
         flex: 0 0 50%;
-        box-shadow:  var(--entry-content-shadow);
+        box-shadow:  $entry-content-shadow;
         padding: 1em;
         display: flex;
         justify-content: space-between;
@@ -138,7 +150,7 @@ $portrait-padding-top: 178%;
     .entry-title {
         padding-bottom: 0.5rem;
         font-weight: 500;
-        font-size: var(--entry-title-font-size);
+        font-size: $entry-title-font-size;
 
         @include bp(mobile) {
             font-size: 1.3em;
